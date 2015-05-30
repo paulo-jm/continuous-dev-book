@@ -1,0 +1,166 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>geekseek</groupId>
+	<artifactId>com.geekseek</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>geekseek-api</module>
+		<module>geekseek-ejb</module>
+		<module>geekseek-ear</module>
+		<module>geekseek-war</module>
+	</modules>
+
+	<properties>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<version.javaee-api>7.0</version.javaee-api>
+		<version.ejb>3.2</version.ejb>
+
+		<!-- maven-compiler-plugin -->
+		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.7</maven.compiler.source>
+
+		<!-- Test -->
+		<version.junit>4.11</version.junit>
+
+		<!-- Plugin -->
+		<version.maven-compiler-plugin>3.1</version.maven-compiler-plugin>
+		<version.maven-ejb-plugin>2.3</version.maven-ejb-plugin>
+		<version.maven-ear-plugin>2.9</version.maven-ear-plugin>
+		<version.maven-war-plugin>2.4</version.maven-war-plugin>
+		<version.maven-eclipse-plugin>2.9</version.maven-eclipse-plugin>
+		<version.maven-jar-plugin>2.4</version.maven-jar-plugin>
+
+	</properties>
+
+	<dependencyManagement>
+
+		<dependencies>
+
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>${version.javaee-api}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<!-- end Plugins -->
+
+			<!-- Test -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${version.junit}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!--end Test -->
+
+			<!-- Plugin -->
+			<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ejb-plugin</artifactId>
+				<version>${version.maven-ejb-plugin}</version>
+				<scope>plugin</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>${version.maven-ear-plugin}</version>
+				<scope>plugin</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>${version.maven-war-plugin}</version>
+				<scope>plugin</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>${version.maven-eclipse-plugin}</version>
+				<scope>plugin</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>${version.maven-jar-plugin}</version>
+				<scope>plugin</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${version.maven-compiler-plugin}</version>
+				<scope>plugin</scope>
+			</dependency>
+
+
+			<!-- end Plugin -->
+
+		</dependencies>
+
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-ejb-plugin</artifactId>
+					<version>${version.maven-ejb-plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-ejb-plugin</artifactId>
+					<version>${version.maven-ejb-plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-ear-plugin</artifactId>
+					<version>${version.maven-ear-plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>${version.maven-war-plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<version>${version.maven-eclipse-plugin}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>${version.maven-jar-plugin}</version>
+				</plugin>
+
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<configuration>
+
+				</configuration>
+			</plugin>
+		</plugins>
+
+	</build>
+</project>
