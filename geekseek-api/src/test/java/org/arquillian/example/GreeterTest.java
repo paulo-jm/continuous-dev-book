@@ -15,21 +15,21 @@ import org.junit.runner.RunWith;
 @RunWith(Arquillian.class)
 public class GreeterTest {
 
-	@Deployment
-	public static WebArchive createDeployment(){
-		return ShrinkWrap.create(WebArchive.class, "test.war")
-				.addAsManifestResource(EmptyAsset.INSTANCE, ArchivePaths.create("beans.xml"))
-				.addClasses(Greeter.class, PhraseBuilder.class); 
-			
-	}
+    @Deployment
+    public static WebArchive createDeployment() {
+        return ShrinkWrap.create(WebArchive.class, "test.war")
+                .addAsManifestResource(EmptyAsset.INSTANCE, ArchivePaths.create("beans.xml"))
+                .addClasses(Greeter.class, PhraseBuilder.class);
 
-	@Inject
-	Greeter greeter;
+    }
 
-	@Test
-	public void should_create_greeting() {
-		Assert.assertEquals("Hello, Earthling!",
-				greeter.createGreeting("Earthling"));
-	}
+    @Inject
+    Greeter greeter;
+
+    @Test
+    public void should_create_greeting() {
+        Assert.assertEquals("Hello, Earthling!",
+                greeter.createGreeting("Earthling"));
+    }
 
 }
