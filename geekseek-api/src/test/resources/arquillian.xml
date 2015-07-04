@@ -11,12 +11,14 @@
 	<container qualifier="jboss-as-managed" default="false">
 		<configuration>
 			<property name="jbossHome">/home/pauojm/jboss-as-7.1.1.Final</property>
+			<property name="allowConnectingToRunningServer">true</property>
 		</configuration>
 	</container>
 
 	<container qualifier="wildfly-as-managed" default="true">
 		<configuration>
 			<property name="jbossHome">/home/pauojm/wildfly-8.2.0.Final</property>
+			<property name="allowConnectingToRunningServer">true</property>
 		</configuration>
 	</container>
 

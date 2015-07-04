@@ -230,8 +230,18 @@
 					<scope>test</scope>
 				</dependency>
 			</dependencies>
-			
+
 			<build>
+			
+				<testResources>
+					<testResource>
+						<directory>src/test/resources</directory>
+					</testResource>
+					<testResource>
+						<directory>src/test/resources-jboss-as-managed</directory>
+					</testResource>
+				</testResources>
+				
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -244,7 +254,7 @@
 					</plugin>
 				</plugins>
 			</build>
-			
+
 		</profile>
 
 		<profile>
@@ -269,6 +279,16 @@
 			</dependencies>
 
 			<build>
+
+				<testResources>
+					<testResource>
+						<directory>src/test/resources</directory>
+					</testResource>
+					<testResource>
+						<directory>src/test/resources-jboss-as-managed</directory>
+					</testResource>
+				</testResources>
+
 				<plugins>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
