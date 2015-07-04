@@ -5,9 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.PostConstruct;
-import javax.faces.bean.ViewScoped;
 
-@ViewScoped
 public class PhraseBuilder {
 
     private Map<String, String> templates;

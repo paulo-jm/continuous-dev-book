@@ -1,7 +1,6 @@
 package org.arquillian.example;
 
 import java.io.PrintStream;
-import javax.ejb.LocalBean;
 
 import javax.inject.Inject;
 

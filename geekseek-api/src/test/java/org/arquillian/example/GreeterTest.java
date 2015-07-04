@@ -7,7 +7,7 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ArchivePaths;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.WebArchive;
+import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,8 +16,8 @@ import org.junit.runner.RunWith;
 public class GreeterTest {
 
     @Deployment
-    public static WebArchive createDeployment() {
-        return ShrinkWrap.create(WebArchive.class, "test.war")
+    public static JavaArchive createDeployment() {
+        return ShrinkWrap.create(JavaArchive.class, "test.jar")
                 .addAsManifestResource(EmptyAsset.INSTANCE, ArchivePaths.create("beans.xml"))
                 .addClasses(Greeter.class, PhraseBuilder.class);
 
@@ -27,7 +27,7 @@ public class GreeterTest {
     Greeter greeter;
 
     @Test
-    public void should_create_greeting() {
+    public void should_create_greeting() {    	
         Assert.assertEquals("Hello, Earthling!",
                 greeter.createGreeting("Earthling"));
     }
